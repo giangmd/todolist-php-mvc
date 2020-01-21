@@ -1,10 +1,16 @@
+<?php
+    use App\App\App;
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <title><?php echo $title ?> - ToDoList PHP MVC</title>
+    <link rel="stylesheet" type="text/css" href="<?php echo App::get('config')['APP_URL'] . '/public/assets/css/bootstrap.min.css' ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo App::get('config')['APP_URL'] . '/public/assets/css/daterangepicker.css' ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo App::get('config')['APP_URL'] . '/public/assets/css/fullcalendar.min.css' ?>" />
     <style type="text/css">
-        h1, h2 {
-            width: 100%;
+        body {
+            font-size: 16px;
         }
         a {
             text-decoration: none;
@@ -13,54 +19,47 @@
             outline: none;
             text-decoration: none;
         }
-        table {
-            border-collapse: collapse;
+        header {
+            padding: 40px 0;
+        }
+        section .content {
+            padding: 40px 0;
+            border-top: 1px solid #d3d9df;
+        }
+        .content {
             width: 100%;
         }
-        th, td {
-            padding: 15px;
+        label.error {
+            display: inline-block;
+            width: 100%;
             text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        .container {
-            width: 80%;
-            display: flex;
-            flex: 1;
-            margin: auto;
-            text-align: center;
-        }
-        .left, .right {
-            display: block;
-            float: left;
-            clear: both;
-        }
-        .left {
-            width: 30%;
-            padding: 0 15px;
-        }
-        .right {
-            width: 70%;
-            padding: 0 15px;
-        }
-        .info {
-            color: #00a9ff;
-        }
-        .danger {
+            font-size: 0.8em;
             color: #ff003b;
         }
-        .btn {
-            cursor: pointer;
-
+        .box-view {
+            display: none;
         }
-        form {
-            width: 100%;
-            font-size: 18px;
+        .box-view.show {
+            display: block;
         }
-        input, select {
-            width: 100%;
-            border: 1px solid #ddd;
-            padding: 10px 15px;
-            box-sizing: border-box;
+        .handle {
+            margin: 20px 0;
+        }
+        .view-handle .btn {
+            margin-right: 15px;
+        }
+        .view-handle .btn:last-child {
+            margin-right: 0;
+        }
+        .logo {
+            font-size: 2em;
+            color: #00a9ff;
+        }
+        .logo a {
+            color: inherit;
+        }
+        .logo a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
