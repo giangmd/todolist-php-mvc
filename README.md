@@ -20,12 +20,19 @@ Move to folder then run
 composer install
 ```
 
-Import file database-migrate.sql to your databse.
-Add all info to config.php
+Import `database-migrate.sql` file to your database server.
+
+Add connect info to `config.php`
 
 ## Deployment
 
-Setup a virtal host in your localhost then run to site.
+Setup a virtal host then run this site.
+
+## UnitTest
+
+```
+./vendor/bin/phpunit tests
+```
 
 ## Built With
 

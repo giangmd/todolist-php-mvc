@@ -25,6 +25,14 @@ class WorkController
         return view('works.index', compact('works', 'title', 'status'));
     }
 
+    public function create()
+    {
+        $title = 'Create new Work';
+        $status = $this->status;
+
+        return view('works.create', compact('title', 'status'));
+    }
+
     public function edit()
     {
         if (!isset($_GET['id'])) {
@@ -39,7 +47,7 @@ class WorkController
         }
 
         $work = $work[0];
-        $title = 'Works';
+        $title = 'Update Work';
         $status = $this->status;
 
         return view('works.update', compact('work', 'title', 'status'));

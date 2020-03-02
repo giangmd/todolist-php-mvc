@@ -27,7 +27,7 @@ class QueryBuilder
 
     public function selectAll(string $table, string $fetchClass=null)
     {
-        $query = $this->db->prepare("select * from {$table};");
+        $query = $this->db->prepare("select * from {$table} order by id DESC;");
         $query->execute();
         
         if ($fetchClass) {

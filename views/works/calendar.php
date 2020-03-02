@@ -44,20 +44,23 @@
 
 </script>
 
-
-
-<header>
+<header class="mt-4 mb-4">
     <div class="container">
-        <h1>To Do List</h1>
+        <h1 class="h1 text-center">To Do List</h1>
+        <div class="row mt-4">
+            <div class="col-6">
+                <a href="/works" class="btn btn-block btn-warning">List Viewer</a>
+            </div>
+            <div class="col-6">
+                <a class="btn btn-block btn-info" href="/works/create">Create New Work</a>
+            </div>
+        </div>
     </div>
 </header>
 
 <section>
     <div class="container">
         <div id='calendar'></div>
-    </div>
-    <div class="container">
-        <h2><a href="/works" class="info">Lists Viewer</a></h2>
     </div>
 </section>
 

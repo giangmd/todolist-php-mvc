@@ -4,9 +4,9 @@ return [
     'DB' => [
         'NAME' => 'todolist',
         'USERNAME' => 'root',
-        'PASSWORD' => 'db@123#',
+        'PASSWORD' => '',
         'CONNECTION' => 'mysql',
-        'HOST' => '21f42e5c9be8',
+        'HOST' => 'localhost',
     ],
     'DEBUG' => true
 ];
