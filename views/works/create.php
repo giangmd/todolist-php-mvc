@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-6">
-                <form action="works/store" method="post">
+                <form action="/works/store" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name" class="form-control" placeholder="Name..." required="required">

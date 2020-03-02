@@ -51,19 +51,4 @@
     </div>
 </section>
 
-<script src='../../public/assets/lib/jquery.min.js'></script>
-
-<script type="text/javascript">
-    $('.delete-work').on('click', function(e) {
-        e.preventDefault()
-
-        var url = $(this).attr('href')
-        if (confirm("Do you want to delete?")) {
-            window.location.href = url
-        } else {
-            return false
-        }
-    })
-</script>
-
 <?php require 'views/layouts/bottom.php' ?>

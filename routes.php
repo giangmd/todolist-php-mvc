@@ -1,4 +1,5 @@
 <?php
+
 $router->get('', 'WorkController@index');
 $router->get('works', 'WorkController@index');
 

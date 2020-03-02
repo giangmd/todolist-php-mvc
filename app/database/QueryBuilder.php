@@ -25,11 +25,11 @@ class QueryBuilder
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function selectAll(string $table, string $fetchClass=null)
+    public function selectAll(string $table, string $fetchClass=null, string $order=null)
     {
-        $query = $this->db->prepare("select * from {$table} order by id DESC;");
+        $query = $this->db->prepare("select * from {$table} {$order};");
         $query->execute();
-        
+
         if ($fetchClass) {
             return $query->fetchAll(PDO::FETCH_CLASS, $fetchClass);
         }
